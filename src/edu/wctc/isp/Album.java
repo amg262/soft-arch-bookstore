@@ -1,4 +1,4 @@
-package edu.wctc.isp.solution.part1;
+package edu.wctc.isp;
 
 import java.time.Duration;
 

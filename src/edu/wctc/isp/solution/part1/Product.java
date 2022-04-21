@@ -1,4 +1,4 @@
-package edu.wctc.isp;
+package edu.wctc.isp.solution.part1;
 
 import java.time.LocalDate;
 

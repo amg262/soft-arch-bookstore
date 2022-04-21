@@ -29,16 +29,6 @@ public class PaperbackBook implements Book {
     }
 
     @Override
-    public double getCost() {
-        return cost;
-    }
-
-    @Override
-    public String getFormattedReleaseDate() {
-        return releaseDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
-    }
-
-    @Override
     public String getISBN() {
         return isbn;
     }
@@ -46,6 +36,16 @@ public class PaperbackBook implements Book {
     @Override
     public int getPages() {
         return pageCount;
+    }
+
+    @Override
+    public double getCost() {
+        return cost;
+    }
+
+    @Override
+    public String getFormattedReleaseDate() {
+        return releaseDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
     }
 
     @Override

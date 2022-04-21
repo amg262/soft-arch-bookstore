@@ -31,26 +31,18 @@ public class VinylRecord implements Album {
     }
 
     @Override
-    public double getCost() {
-        return cost;
+    public Duration getPlayingTime() {
+        return playingTime;
     }
 
-    private String getFormattedPlayingTime() {
-        long seconds = playingTime.getSeconds();
-        return String.format(
-                "%d:%02d",
-                seconds / SECONDS_IN_HOUR,
-                (seconds % SECONDS_IN_HOUR) / SECONDS_IN_MINUTE);
+    @Override
+    public double getCost() {
+        return cost;
     }
 
     @Override
     public String getFormattedReleaseDate() {
         return releaseDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
-    }
-
-    @Override
-    public Duration getPlayingTime() {
-        return playingTime;
     }
 
     @Override
@@ -86,5 +78,13 @@ public class VinylRecord implements Album {
         sb.append("\nRelease date: ").append(getFormattedReleaseDate());
         sb.append("\nQuantity on hand: ").append(quantityOnHand);
         return sb.toString();
+    }
+
+    private String getFormattedPlayingTime() {
+        long seconds = playingTime.getSeconds();
+        return String.format(
+                "%d:%02d",
+                seconds / SECONDS_IN_HOUR,
+                (seconds % SECONDS_IN_HOUR) / SECONDS_IN_MINUTE);
     }
 }

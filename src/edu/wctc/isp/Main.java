@@ -3,11 +3,13 @@ package edu.wctc.isp;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Original Program");
+        System.out.println("Instructor Solution 2");
 
         Product book1 = new HardcoverBook("The Hunger Games", "9780439023528",
                 8.79, 12,
@@ -22,10 +24,14 @@ public class Main {
                 LocalDate.of(2011, Month.APRIL, 12),
                 "Miles Davis", Duration.ofMinutes(46));
 
-        System.out.println(book1.toString());
-        System.out.println("\n");
-        System.out.println(book2.toString());
-        System.out.println("\n");
-        System.out.println(record.toString());
+        List<Product> products = new ArrayList<>();
+        products.add(book1);
+        products.add(book2);
+        products.add(record);
+
+        for (Product product : products) {
+            System.out.println(product.toString());
+            System.out.println("\n");
+        }
     }
 }

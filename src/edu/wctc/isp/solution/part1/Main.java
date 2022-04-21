@@ -3,11 +3,17 @@ package edu.wctc.isp.solution.part1;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
         System.out.println("Instructor Solution 1");
+
+        List<Product> products = new ArrayList<>();
+
+
 
         Book book1 = new HardcoverBook("The Hunger Games", "9780439023528",
                 8.79, 12,
